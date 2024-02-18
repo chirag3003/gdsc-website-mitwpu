@@ -1,14 +1,10 @@
-import { Inter } from 'next/font/google'
-
 import './globals.css'
 import { Toaster } from 'react-hot-toast'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata = {
-    title: 'Nextjs 14, TailwindCss Template',
+    title: 'GDSC MIT WPU',
     description:
-        'A template for frontend developers created By Chirag Bhalotia',
+        'gdsc website created By Chirag Bhalotia',
 }
 
 interface RootLayoutProps {
@@ -18,8 +14,10 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <html lang="en">
-            <body className={`${inter.className} text-text`}>
-                {children}
+            <body className={`text-text`}>
+                <main className="flex min-h-screen flex-col items-center justify-between bg-background p-24">
+                    {children}
+                </main>
                 <Toaster />
             </body>
         </html>
