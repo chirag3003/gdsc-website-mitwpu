@@ -12,7 +12,7 @@ export default function Home() {
             <section
                 className={'hero-section lg:min-h-screen w-full flex gap-20 flex-col lg:flex-row lg:items-center  p-8 lg:p-24 pt-32 lg:pt-32'}>
                 <div className="content w-full lg:w-1/2">
-                    <h1 className={'text-6xl'}>GDSC MITWPU</h1>
+                    <h1 className={'text-6xl bg-clip-text text-transparent bg-gradient-to-br from-cyan-600 to-violet-600'}>GDSC MITWPU</h1>
                     <p className="description text-muted text-lg mt-4 max-w-xl">
                         At GDSC MIT-WPU, we nurture a culture of creativity and collaboration. We aim to explore endless
                         possibilities of technology, with the support and guidance of a warm community.
@@ -43,7 +43,7 @@ export default function Home() {
                     <Skeleton className={"max-w-sm mx-auto w-full aspect-square"} />
                 </div>
             </section>
-            <section className={' p-8 lg:p-24'}>
+            <section className={'p-8 lg:p-24'}>
                 <h2 className={"text-5xl mb-10"}>What do we do?</h2>
                 <Carousel className="w-10/12 mx-auto">
                     <CarouselContent>
