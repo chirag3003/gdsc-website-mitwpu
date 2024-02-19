@@ -6,8 +6,21 @@ import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { collection, doc, getDoc, getFirestore } from '@firebase/firestore'
+import { app } from '@/lib/firebase'
+import { redirect, RedirectType } from 'next/navigation'
+interface EventPageProps {
+    params: {
+        id: string
+    }
+}
+const EventPage = async ({params:{id}}:EventPageProps) => {
+    const db = getFirestore(app)
+    const eventsCollection = collection(db, 'events')
+    const querySnapshot = await getDoc(doc(eventsCollection, id))
+    const data = querySnapshot.data() as IEventDoc
+    if (!data) redirect('/events', RedirectType.replace)
 
-const EventPage = () => {
     return (
         <>
             <section
