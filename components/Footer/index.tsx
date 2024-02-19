@@ -33,7 +33,7 @@ const navigation = {
 }
 const Footer = () => {
     return (
-        <footer className="mt-8 border-t border-border/10 p-8 md:flex md:items-center md:justify-between lg:px-24">
+        <footer className="mt-8 border-t border-border/10 p-8 flex flex-col gap-9 md:flex-row md:items-center md:justify-between lg:px-24">
 
             <div className="logo">
                 <img className="h-14 w-auto" src={'/gdsc-logo.svg'}  alt={""}/>
