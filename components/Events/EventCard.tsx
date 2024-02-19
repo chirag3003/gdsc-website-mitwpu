@@ -16,7 +16,7 @@ const EventCard = () => {
                 <CardDescription className={"text-muted"}>Event Description</CardDescription>
             </CardContent>
             <CardFooter className={'flex items-center gap-3 justify-end mt-4'}>
-                <Link href={'#'} className={cn(buttonVariants(),"")}>Details</Link>
+                <Link href={`/events/id`} className={cn(buttonVariants(),"")}>Details</Link>
             </CardFooter>
         </Card>
     )
