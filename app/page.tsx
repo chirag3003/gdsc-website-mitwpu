@@ -11,10 +11,10 @@ export default function Home() {
                     <p className={" pl-10 border-l"}>Description Lorem Ipsum </p>
                 </CardHeader>
             </Card>
-            <Carousel className="w-full">
+            <Carousel className="w-10/12 mx-auto">
                 <CarouselContent>
                     {Array.from({ length: 5 }).map((_, index) => (
-                        <CarouselItem className={"basis-1 md:basis-1/2 lg:basis-1/3"} key={index}>
+                        <CarouselItem className={"md:basis-1/2 lg:basis-1/3"} key={index}>
                             <div className="p-1">
                                 <Card>
                                     <CardContent className="flex aspect-square items-center justify-center p-6">
