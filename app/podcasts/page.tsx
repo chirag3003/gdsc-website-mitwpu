@@ -2,7 +2,6 @@ import React from 'react'
 import PodcastsList from '@/components/Podcasts/PodcastsList'
 import { collection, getDocs, getFirestore } from '@firebase/firestore'
 import { app } from '@/lib/firebase'
-import { TeamCardProps } from '@/components/Teams/TeamCard'
 
 const PodcastsPage = async () => {
     const db = getFirestore(app)

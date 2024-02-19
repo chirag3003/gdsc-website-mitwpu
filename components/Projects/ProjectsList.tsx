@@ -39,16 +39,21 @@ const posts = [
     },
     // More posts...
 ]
-const ProjectsList = () => {
+
+interface ProjectsListProps {
+    projects: IProjectDoc[]
+}
+
+const ProjectsList = ({ projects }: ProjectsListProps) => {
     return (
         <div>
-            {posts.map((post) => (
-                <Link href={post.href} key={post.id}>
-                    <article key={post.id}
-                             className="relative isolate flex flex-col gap-8 lg:flex-row-reverse justify-between max-w-6xl mx-auto border-b py-8">
+            {projects.map((project) => (
+                <Link href={`/projects/${project.id}`} key={project.id}>
+                    <article
+                        className="relative isolate flex flex-col gap-8 lg:flex-row-reverse justify-between max-w-6xl mx-auto border-b py-8">
                         <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
                             <img
-                                src={post.imageUrl}
+                                src={project.bannerImgUrl}
                                 alt=""
                                 className="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
                             />
@@ -56,18 +61,18 @@ const ProjectsList = () => {
                         </div>
                         <div>
                             <div className="flex items-center gap-x-4 text-xs">
-                                <time dateTime={post.datetime} className="text-gray-500">
-                                    {post.date}
+                                <time dateTime={'2020-03-16'} className="text-gray-500">
+                                    {'Mar 16, 2020'}
                                 </time>
                             </div>
                             <div className="relative max-w-xl">
                                 <h3 className="mt-3 text-lg font-semibold leading-6">
                                     <p>
                                         <span className="absolute inset-0" />
-                                        {post.title}
+                                        {project.title}
                                     </p>
                                 </h3>
-                                <p className="mt-5 text-sm leading-6">{post.description}</p>
+                                <p className="mt-5 text-sm leading-6">{project.singleLineDescription}</p>
                             </div>
                         </div>
                     </article>
