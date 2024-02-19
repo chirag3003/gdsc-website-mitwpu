@@ -8,7 +8,7 @@ const ContactPage = () => {
     return (
         <div className="relative isolate">
             <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-                <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
+                <div className="relative px-6 pb-20 pt-24 lg:static lg:px-8">
                     <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
                         <h2 className="text-3xl font-bold tracking-tight text-white">Get in touch</h2>
                         <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -31,7 +31,7 @@ const ContactPage = () => {
                         </dl>
                     </div>
                 </div>
-                <form action="#" method="POST" className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
+                <form action="#" method="POST" className="px-6 pb-24 pt-20 lg:px-8">
                     <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
                         <div className="flex flex-col gap-6">
                             <div className={'flex flex-col lg:flex-row gap-6'}>
