@@ -13,6 +13,9 @@ const navLinks = [{
     title: 'Events',
     href: '/events',
 }, {
+    title: 'Projects',
+    href: '/projects',
+}, {
     title: 'Contact',
     href: '/contact',
 }]
