@@ -7,7 +7,7 @@ const posts = [
     {
         id: 1,
         title: 'Boost your conversion rate',
-        href: '#',
+        href: '/projects/id',
         description:
             'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto corrupti dicta laboris incididunt.',
         imageUrl:
@@ -18,7 +18,7 @@ const posts = [
     {
         id: 1,
         title: 'Boost your conversion rate',
-        href: '#',
+        href: '/projects/id',
         description:
             'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto corrupti dicta laboris incididunt.',
         imageUrl:
@@ -29,7 +29,7 @@ const posts = [
     {
         id: 1,
         title: 'Boost your conversion rate',
-        href: '#',
+        href: '/projects/id',
         description:
             'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto corrupti dicta laboris incididunt.',
         imageUrl:
