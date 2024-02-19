@@ -12,7 +12,7 @@ interface PodcastsListProps {
 
 const PodcastsList = ({ title }: PodcastsListProps) => {
     return (
-        <div>
+        <div className={"mb-20"}>
             <h2 className={'text-3xl lg:text-4xl mb-10'}>{title}</h2>
             <div className="events-grid grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
                 <Link href={'#'}>
