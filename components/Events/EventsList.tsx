@@ -11,7 +11,7 @@ interface EventsListProps {
 
 const EventsList = ({ title }: EventsListProps) => {
     return (
-        <div>
+        <div className={"mb-20"}>
             <h2 className={'text-3xl lg:text-4xl mb-10'}>{title}</h2>
             <div className="events-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <Card>
