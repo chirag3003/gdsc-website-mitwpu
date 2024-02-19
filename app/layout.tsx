@@ -16,7 +16,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <html lang="en">
-        <body className={`text-foreground bg-background`}>
+        <body className={`text-foreground bg-background dark`}>
         <Navbar />
         <main className="bg-background p-8 lg:p-24 pt-32 lg:pt-32">
             {children}

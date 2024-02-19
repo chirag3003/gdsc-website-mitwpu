@@ -10,14 +10,14 @@ const ContactPage = () => {
             <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
                 <div className="relative px-6 pb-20 pt-24 lg:static lg:px-8">
                     <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-                        <h2 className="text-3xl font-bold tracking-tight text-white">Get in touch</h2>
-                        <p className="mt-6 text-lg leading-8 text-gray-300">
+                        <h2 className="text-3xl font-bold tracking-tight text-primary">Get in touch</h2>
+                        <p className="mt-6 text-lg leading-8 text-muted">
                             Proin volutpat consequat porttitor cras nullam gravida at. Orci molestie a eu arcu. Sed ut
                             tincidunt
                             integer elementum id sem. Arcu sed malesuada et magna.
                         </p>
-                        <dl className="mt-10 space-y-4 text-base leading-7 text-gray-300">
-                            <div className="flex gap-x-4 bg-white/10 px-6 py-2 rounded">
+                        <dl className="mt-10 space-y-4 text-base leading-7 text-muted">
+                            <div className="flex gap-x-4 bg-primary/10 px-6 py-2 rounded">
                                 <dt className="flex-none">
                                     <span className="sr-only">Email</span>
                                     <EnvelopeIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
