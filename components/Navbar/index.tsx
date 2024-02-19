@@ -50,14 +50,17 @@ function Navbar() {
                         )
                     })}
                 </nav>
-                <Button variant={'ghost'} className={'lg:hidden'} onClick={toggleMenu}><Menu height={26} width={26} /></Button>
+                <Button variant={'ghost'} className={'lg:hidden'} onClick={toggleMenu}><Menu height={26}
+                                                                                             width={26} /></Button>
                 <div
                     className={cn('mobile-menu absolute top-[200%] left-0 right-0 lg:hidden', { 'hidden': !menuOpen })}>
                     <Card>
                         <CardContent className={'p-4 flex flex-col gap-3'}>
                             {navLinks.map((navLink, index) => {
                                 return (
-                                    <Link key={index} href={navLink.href}
+                                    <Link onClick={() => {
+                                        setMenuOpen(false)
+                                    }} key={index} href={navLink.href}
                                           className={'bg-primary/20 w-full px-4 py-2 rounded-lg'}>{navLink.title}</Link>
                                 )
                             })}
