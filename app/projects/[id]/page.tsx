@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils'
 const ProjectPage = () => {
     return (
         <>
-            <section className={'flex flex-col lg:flex-row gap-20 mb-20'}>
+            <section className={'flex flex-col lg:flex-row gap-20 mb-20 p-8 lg:p-24 pt-32 lg:pt-32'}>
                 <div className="content w-full lg:w-1/2">
                     <h1 className={'text-2xl lg:text-4xl'}>How you can train an AI to convert your design mockups into
                         HTML and

@@ -5,12 +5,11 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 export default function Home() {
     return (
         <>
-            <Card className={"about w-full mb-20"}>
-                <CardHeader className={"flex flex-row justify-between items-center space-y-0"}>
-                    <p>About GDSC MITWPU</p>
-                    <p className={" pl-10 border-l"}>Description Lorem Ipsum </p>
-                </CardHeader>
-            </Card>
+            <section className={"hero-section lg:min-h-screen w-full flex gap-20 flex-col lg:flex-row lg:items-center"}>
+                <div className="content w-full lg:w-1/2">
+                    <h1 className={"text-6xl"}>GDSC MITWPU</h1>
+                </div>
+            </section>
             <Carousel className="w-10/12 mx-auto">
                 <CarouselContent>
                     {Array.from({ length: 5 }).map((_, index) => (

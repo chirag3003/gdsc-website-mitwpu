@@ -18,7 +18,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <html lang="en">
         <body className={`text-foreground bg-background dark`}>
         <Navbar />
-        <main className="bg-background p-8 lg:p-24 pt-32 lg:pt-32">
+        <main className="bg-background">
             {children}
         </main>
         <Toaster />
