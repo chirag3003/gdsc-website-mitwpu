@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import React from 'react'
 import { EnvelopeIcon } from '@heroicons/react/16/solid'
@@ -13,6 +13,7 @@ import {
 import { zodResolver } from '@hookform/resolvers/zod'
 import axios from 'axios'
 import { useToast } from '@/components/ui/use-toast'
+import Link from 'next/link'
 
 const ContactPage = () => {
     const { toast } = useToast()
@@ -49,23 +50,23 @@ const ContactPage = () => {
                             malesuada et magna.
                         </p>
                         <dl className="mt-10 space-y-4 text-base leading-7 text-muted">
-                            <div className="flex gap-x-4 bg-primary/10 px-6 py-2 rounded">
+                            <Link
+                                href={'mailto:hello@example.com'}
+                                target="_blank"
+                                referrerPolicy="no-referrer"
+                                className="flex gap-x-4 bg-primary/10 px-6 py-2 rounded hover:text-foreground"
+                            >
                                 <dt className="flex-none">
                                     <span className="sr-only">Email</span>
                                     <EnvelopeIcon
-                                        className="h-7 w-6 text-gray-400"
+                                        className="h-7 w-6 text-muted"
                                         aria-hidden="true"
                                     />
                                 </dt>
                                 <dd>
-                                    <a
-                                        className="hover:text-white"
-                                        href="mailto:hello@example.com"
-                                    >
-                                        hello@example.com
-                                    </a>
+                                    <p>hello@example.com</p>
                                 </dd>
-                            </div>
+                            </Link>
                         </dl>
                     </div>
                 </div>

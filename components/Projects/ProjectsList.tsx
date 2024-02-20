@@ -61,7 +61,7 @@ const ProjectsList = ({ projects }: ProjectsListProps) => {
                         </div>
                         <div>
                             <div className="flex items-center gap-x-4 text-xs">
-                                <time dateTime={'2020-03-16'} className="text-gray-500">
+                                <time dateTime={'2020-03-16'} className="text-muted">
                                     {'Mar 16, 2020'}
                                 </time>
                             </div>
