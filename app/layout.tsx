@@ -1,5 +1,5 @@
 import './globals.css'
-import { Toaster } from 'react-hot-toast'
+import { Toaster } from '@/components/ui/toaster'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 
