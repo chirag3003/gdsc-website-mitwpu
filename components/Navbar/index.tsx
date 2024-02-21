@@ -28,6 +28,10 @@ const navLinks = [
         title: 'Contact Us',
         href: '/contact',
     },
+    {
+        title: 'Join Us',
+        href: '/join-us',
+    },
 ]
 
 function Navbar() {
