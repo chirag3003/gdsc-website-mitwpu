@@ -3,6 +3,8 @@ import ProjectsList from '@/components/Projects/ProjectsList'
 import { collection, getDocs, getFirestore } from '@firebase/firestore'
 import { app } from '@/lib/firebase'
 
+export const revalidate = 3600
+
 const ProjectsPage = async () => {
     const db = getFirestore(app)
     const projectsCollection = collection(db, 'projects')

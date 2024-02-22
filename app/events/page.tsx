@@ -4,8 +4,9 @@ import { collection, getDocs, getFirestore } from '@firebase/firestore'
 import { app } from '@/lib/firebase'
 import { EventCardProps } from '@/components/Events/EventCard'
 
-const EventsPage = async () => {
+export const revalidate = 3600
 
+const EventsPage = async () => {
     const db = getFirestore(app)
     const eventsCollection = collection(db, 'events')
     const querySnapshot = await getDocs(eventsCollection)
