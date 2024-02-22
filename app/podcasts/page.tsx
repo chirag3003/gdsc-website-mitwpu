@@ -3,7 +3,7 @@ import PodcastsList from '@/components/Podcasts/PodcastsList'
 import { collection, getDocs, getFirestore } from '@firebase/firestore'
 import { app } from '@/lib/firebase'
 
-export const revalidate = 3600
+export const revalidate = 600
 
 const PodcastsPage = async () => {
     const db = getFirestore(app)

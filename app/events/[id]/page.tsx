@@ -18,7 +18,7 @@ interface EventPageProps {
     }
 }
 
-export const revalidate = 3600
+export const revalidate = 600
 
 const EventPage = async ({ params: { id } }: EventPageProps) => {
     const db = getFirestore(app)

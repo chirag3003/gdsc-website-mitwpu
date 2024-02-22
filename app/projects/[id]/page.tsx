@@ -19,7 +19,7 @@ import { redirect, RedirectType } from 'next/navigation'
 import Image from 'next/image'
 import { TeamCardProps } from '@/components/Teams/TeamCard'
 
-export const revalidate = 3600
+export const revalidate = 600
 
 interface ProjectPageParams {
     params: {

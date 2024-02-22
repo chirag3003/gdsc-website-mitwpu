@@ -4,7 +4,7 @@ import { collection, getDocs, getFirestore } from '@firebase/firestore'
 import { app } from '@/lib/firebase'
 import { TeamCardProps } from '@/components/Teams/TeamCard'
 
-export const revalidate = 3600
+export const revalidate = 600
 
 const TeamPage = async () => {
     const db = getFirestore(app)
