@@ -36,20 +36,6 @@ const EventPage = async ({ params: { id } }: EventPageProps) => {
                     <p className="description text-muted text-lg mt-4 max-w-3xl">
                         {data.multiLineDescription}
                     </p>
-                    <div className="links flex gap-4 mt-8">
-                        <Link href={'#'} className={''}>
-                            <LinkedInLogoIcon height={32} width={32} />
-                        </Link>
-                        <Link href={'#'} className={''}>
-                            <InstagramLogoIcon height={32} width={32} />
-                        </Link>
-                        <Link href={'#'} className={''}>
-                            <Facebook height={32} width={32} />
-                        </Link>
-                        <Link href={'#'} className={''}>
-                            <Twitter height={32} width={32} />
-                        </Link>
-                    </div>
                 </div>
                 <div className="image w-full lg:w-1/2">
                     <div className="mx-auto w-full aspect-video relative rounded-xl overflow-hidden">
