@@ -1,5 +1,12 @@
 import React from 'react'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 import Link from 'next/link'
 import { buttonVariants } from '@/components/ui/button'
@@ -7,7 +14,7 @@ import { cn } from '@/lib/utils'
 import EventCard, { EventCardProps } from '@/components/Events/EventCard'
 
 interface EventsListProps {
-    title: string,
+    title: string
     events: EventCardProps[]
 }
 
@@ -19,6 +26,9 @@ const EventsList = ({ title, events }: EventsListProps) => {
                 {events.map((event, index) => (
                     <EventCard key={index} {...event} />
                 ))}
+                {events.length === 0 && (
+                    <p>Unfortunately, there are no events right now</p>
+                )}
             </div>
         </div>
     )
