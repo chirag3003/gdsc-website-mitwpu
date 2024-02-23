@@ -10,9 +10,14 @@ const TeamPage = async () => {
     const db = getFirestore(app)
     const teamsCollection = collection(db, 'members')
     const querySnapshot = await getDocs(teamsCollection)
-    const team: TeamCardProps[] = []
+    const teams = new Map<string, TeamCardProps[]>()
+    teams.set('Leadership', [])
+    teams.set('Tech', [])
     querySnapshot.forEach((doc) => {
         const dataItem = doc.data() as ITeamDoc
+        if (!(dataItem.core && dataItem.active)) {
+            return
+        }
         const data: TeamCardProps = {
             name: `${dataItem.firstname} ${dataItem.lastname}`,
             role: dataItem.role,
@@ -20,11 +25,22 @@ const TeamPage = async () => {
             email: dataItem.email,
             linkedin: dataItem.linkedinProfileLink,
         }
-        team.push(data)
+        if (!teams.has(dataItem.department)) {
+            teams.set(dataItem.department, [])
+        }
+        teams.get(dataItem.department)!.push(data)
     })
     return (
         <section className={' p-8 lg:p-24 pt-32 lg:pt-32'}>
-            <TeamsList title={'Tech Team'} team={team} />
+            {Array.from(teams.keys()).map((team, index) => {
+                return (
+                    <TeamsList
+                        key={index}
+                        title={team}
+                        team={teams.get(team)!}
+                    />
+                )
+            })}
         </section>
     )
 }
