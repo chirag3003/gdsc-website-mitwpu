@@ -2,8 +2,8 @@
 
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
-import { Button, buttonVariants } from '../ui/button'
+import React, { useState } from 'react'
+import { Button } from '../ui/button'
 import { Menu } from 'react-feather'
 import { Card, CardContent } from '@/components/ui/card'
 
