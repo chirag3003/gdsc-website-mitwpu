@@ -40,7 +40,7 @@ const ContactPage = () => {
             <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
                 <div className="relative px-6 pb-20 pt-24 lg:static lg:px-8">
                     <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-                        <h2 className="text-3xl font-bold tracking-tight text-primary">
+                        <h2 className="text-5xl font-bold tracking-tight">
                             Get in touch
                         </h2>
                         <p className="mt-6 text-lg leading-8 text-muted">
