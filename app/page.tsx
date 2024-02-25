@@ -1,5 +1,5 @@
-import { Button, buttonVariants } from '@/components/ui/button'
-import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
 import {
     Carousel,
     CarouselContent,
@@ -13,9 +13,10 @@ import {
     InstagramLogoIcon,
     LinkedInLogoIcon,
 } from '@radix-ui/react-icons'
-import { Facebook, Twitter, } from 'react-feather'
+import { Facebook, Twitter } from 'react-feather'
 import { Skeleton } from '@/components/ui/skeleton'
 import Image from 'next/image'
+import socials from '@/components/configs/socials'
 
 const whatDoWeDo = [
     {
@@ -52,21 +53,17 @@ export default function Home() {
                         community.
                     </p>
                     <div className="links flex gap-4 mt-8">
-                        <Link href={'#'} className={''}>
-                            <LinkedInLogoIcon height={32} width={32} />
-                        </Link>
-                        <Link href={'#'} className={''}>
-                            <GitHubLogoIcon height={32} width={32} />
-                        </Link>
-                        <Link href={'#'} className={''}>
-                            <InstagramLogoIcon height={32} width={32} />
-                        </Link>
-                        <Link href={'#'} className={''}>
-                            <Facebook height={32} width={32} />
-                        </Link>
-                        <Link href={'#'} className={''}>
-                            <Twitter height={32} width={32} />
-                        </Link>
+                        {socials.map((social, index) => {
+                            return (
+                                <Link
+                                    key={index}
+                                    href={social.url}
+                                    className={'p-1'}
+                                >
+                                    <social.icon height={32} width={32} />
+                                </Link>
+                            )
+                        })}
                     </div>
                     <div className="buttons flex gap-4 mt-4">
                         <Button className={''} size={'lg'}>
