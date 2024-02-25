@@ -13,7 +13,7 @@ import {
     InstagramLogoIcon,
     LinkedInLogoIcon,
 } from '@radix-ui/react-icons'
-import { Facebook, Twitter } from 'react-feather'
+import { Facebook, Twitter, } from 'react-feather'
 import { Skeleton } from '@/components/ui/skeleton'
 import Image from 'next/image'
 

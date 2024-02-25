@@ -14,6 +14,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import axios from 'axios'
 import { useToast } from '@/components/ui/use-toast'
 import Link from 'next/link'
+import socials from '@/components/configs/socials'
 
 const ContactPage = () => {
     const { toast } = useToast()
@@ -44,30 +45,30 @@ const ContactPage = () => {
                             Get in touch
                         </h2>
                         <p className="mt-6 text-lg leading-8 text-muted">
-                            Proin volutpat consequat porttitor cras nullam
-                            gravida at. Orci molestie a eu arcu. Sed ut
-                            tincidunt integer elementum id sem. Arcu sed
-                            malesuada et magna.
+                            We{"'"}re thrilled to keep in touch with you! Here
+                            are various channels through which you can connect
+                            with us:
                         </p>
-                        <dl className="mt-10 space-y-4 text-base leading-7 text-muted">
-                            <Link
-                                href={'mailto:hello@example.com'}
-                                target="_blank"
-                                referrerPolicy="no-referrer"
-                                className="flex gap-x-4 bg-primary/10 px-6 py-2 rounded hover:text-foreground"
-                            >
-                                <dt className="flex-none">
-                                    <span className="sr-only">Email</span>
-                                    <EnvelopeIcon
-                                        className="h-7 w-6 text-muted"
-                                        aria-hidden="true"
-                                    />
-                                </dt>
-                                <dd>
-                                    <p>hello@example.com</p>
-                                </dd>
-                            </Link>
-                        </dl>
+                        <div className="mt-10 space-y-4 text-base leading-7 text-muted">
+                            {socials.map((social, index) => {
+                                return (
+                                    <Link
+                                        href={social.url}
+                                        target="_blank"
+                                        referrerPolicy="no-referrer"
+                                        key={index}
+                                        className="flex flex-none gap-x-4 bg-black/10 dark:bg-white/10 px-6 py-2 rounded hover:text-foreground"
+                                    >
+                                        <span className="sr-only">{social.name}</span>
+                                        <social.icon
+                                            className="h-7 w-6"
+                                            aria-hidden="true"
+                                        />
+                                        <p>{social.name}</p>
+                                    </Link>
+                                )
+                            })}
+                        </div>
                     </div>
                 </div>
                 <form
