@@ -28,60 +28,6 @@ function JoinUsPage() {
             </div>
             <form className="max-w-lg w-full mx-auto flex flex-col gap-4">
                 <div className="grid w-full items-center gap-1.5">
-                    <Label htmlFor="name">Full Name</Label>
-                    <Input id="name" placeholder="Full Name" />
-                </div>
-                <div className="grid w-full items-center gap-1.5">
-                    <Label htmlFor="phoneNo">Phone Number</Label>
-                    <Input id="phoneNo" placeholder="Phone Number" />
-                </div>
-                <div className="grid w-full items-center gap-1.5">
-                    <Label htmlFor="work-email">Official Email Address</Label>
-                    <Input
-                        type="email"
-                        id="work-email"
-                        placeholder="Official Email Address"
-                    />
-                </div>
-                <div className="grid w-full items-center gap-1.5">
-                    <Label htmlFor="email">Personal Email</Label>
-                    <Input
-                        type="email"
-                        id="email"
-                        placeholder="Personal Email"
-                    />
-                </div>
-                <div className="grid w-full items-center gap-1.5">
-                    <Label htmlFor="course">Enrolled Course</Label>
-                    <Input
-                        type="course"
-                        id="course"
-                        placeholder="Enrolled Course"
-                    />
-                </div>
-                <div className="grid w-full items-center gap-1.5">
-                    <Label htmlFor="year">Year</Label>
-                    <Select>
-                        <SelectTrigger id={'year'} className="w-full">
-                            <SelectValue placeholder="Year" />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectItem value="first-year">
-                                First Year
-                            </SelectItem>
-                            <SelectItem value="second-year">
-                                Second Year
-                            </SelectItem>
-                            <SelectItem value="third-year">
-                                Third Year
-                            </SelectItem>
-                            <SelectItem value="fourth-year">
-                                Fourth Year
-                            </SelectItem>
-                        </SelectContent>
-                    </Select>
-                </div>
-                <div className="grid w-full items-center gap-1.5">
                     <Label htmlFor="role">Preferred Role</Label>
                     <Select>
                         <SelectTrigger id="role" className="w-full">
@@ -93,14 +39,6 @@ function JoinUsPage() {
                             <SelectItem value="system">System</SelectItem>
                         </SelectContent>
                     </Select>
-                </div>
-                <div className="grid w-full items-center gap-1.5">
-                    <Label htmlFor="about">Tell us about herself</Label>
-                    <Textarea
-                        id="about"
-                        placeholder="Tell us about herself"
-                        rows={4}
-                    />
                 </div>
                 <Button className="text-lg w-full">Submit</Button>
             </form>
