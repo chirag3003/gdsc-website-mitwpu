@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 * {
-    font-family: "Roboto Mono", monospace;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /*@layer base {
@@ -125,5 +125,21 @@
         --border: 240 60% 60%;
         --input: 240 61% 80%;
         --ring: 242 100% 60%;
+    }
+}
+
+.bg-gradient {
+    background-size: 400% 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    animation: slide-animation 1s linear 1s 1 normal forwards;
+}
+
+@keyframes slide-animation {
+    0% {
+        background-position: right;
+    }
+    100% {
+        background-position: left;
     }
 }

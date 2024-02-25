@@ -41,7 +41,7 @@ export default function Home() {
                 <div className="content w-full lg:w-1/2">
                     <h1
                         className={
-                            'text-6xl bg-clip-text text-transparent bg-gradient-to-br from-cyan-600 to-violet-600'
+                            'bg-gradient text-6xl bg-clip-text bg-no-repeat text-transparent bg-gradient-to-br from-cyan-600 via-primary to-violet-600'
                         }
                     >
                         GDSC MITWPU
