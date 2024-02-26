@@ -3,6 +3,7 @@ import TeamsList from '@/components/Teams/TeamsList'
 import { collection, getDocs, getFirestore } from '@firebase/firestore'
 import { app } from '@/lib/firebase'
 import { TeamCardProps } from '@/components/Teams/TeamCard'
+import Teams from '@/components/Teams'
 
 export const revalidate = 600
 
@@ -11,8 +12,8 @@ const TeamPage = async () => {
     const teamsCollection = collection(db, 'members')
     const querySnapshot = await getDocs(teamsCollection)
     const teams = new Map<string, TeamCardProps[]>()
-    teams.set('Leadership', [])
     teams.set('Tech', [])
+    const leadership: TeamCardProps[] = []
     querySnapshot.forEach((doc) => {
         const dataItem = doc.data() as ITeamDoc
         if (!(dataItem.core && dataItem.active)) {
@@ -25,6 +26,10 @@ const TeamPage = async () => {
             email: dataItem.email,
             linkedin: dataItem.linkedinProfileLink,
         }
+        if (dataItem.department === 'Leadership') {
+            leadership.push(data)
+            return
+        }
         if (!teams.has(dataItem.department)) {
             teams.set(dataItem.department, [])
         }
@@ -32,15 +37,8 @@ const TeamPage = async () => {
     })
     return (
         <section className={' p-8 lg:p-24 pt-32 lg:pt-32'}>
-            {Array.from(teams.keys()).map((team, index) => {
-                return (
-                    <TeamsList
-                        key={index}
-                        title={team}
-                        team={teams.get(team)!}
-                    />
-                )
-            })}
+            <TeamsList title="Leadership" team={leadership} />
+            <Teams teams={teams} />
         </section>
     )
 }

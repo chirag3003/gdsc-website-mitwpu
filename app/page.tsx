@@ -8,13 +8,6 @@ import {
     CarouselPrevious,
 } from '@/components/ui/carousel'
 import Link from 'next/link'
-import {
-    GitHubLogoIcon,
-    InstagramLogoIcon,
-    LinkedInLogoIcon,
-} from '@radix-ui/react-icons'
-import { Facebook, Twitter } from 'react-feather'
-import { Skeleton } from '@/components/ui/skeleton'
 import Image from 'next/image'
 import socials from '@/components/configs/socials'
 
