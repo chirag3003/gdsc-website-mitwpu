@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button'
+import { Button, buttonVariants } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import {
     Carousel,
@@ -61,12 +61,21 @@ export default function Home() {
                         })}
                     </div>
                     <div className="buttons flex gap-4 mt-4">
-                        <Button className={''} size={'lg'}>
+                        <Link
+                            href={'/contact'}
+                            className={buttonVariants({ size: 'lg' })}
+                        >
                             Contact US
-                        </Button>
-                        <Button variant={'secondary'} size={'lg'}>
+                        </Link>
+                        <Link
+                            href={'/join-us'}
+                            className={buttonVariants({
+                                size: 'lg',
+                                variant: 'secondary',
+                            })}
+                        >
                             Join US
-                        </Button>
+                        </Link>
                     </div>
                 </div>
                 <div className="image w-full lg:w-1/2">
