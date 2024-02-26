@@ -59,6 +59,7 @@ function Navbar() {
                     {navLinks.map((link, index) => {
                         return (
                             <Link
+                                prefetch={true}
                                 key={index}
                                 href={link.href}
                                 className={
