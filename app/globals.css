@@ -132,7 +132,7 @@
     background-size: 400% 100%;
     background-repeat: no-repeat;
     background-position: right;
-    animation: slide-animation 1s linear 1s 1 normal forwards;
+    animation: slide-animation 2s linear 1s infinite alternate forwards;
 }
 
 @keyframes slide-animation {

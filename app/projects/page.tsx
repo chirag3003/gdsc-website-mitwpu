@@ -15,7 +15,8 @@ const ProjectsPage = async () => {
         projects.push(data)
     })
     return (
-        <section className={'p-8 lg:p-24 pt-32 lg:pt-32'}>
+        <section className={'p-8 lg:p-24 pt-32 lg:pt-32 min-h-[90vh]'}>
+            {projects.length === 0 && <p>No projects right now</p>}
             <ProjectsList projects={projects} />
         </section>
     )
