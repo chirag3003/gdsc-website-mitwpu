@@ -60,7 +60,7 @@ export default function Home() {
                                     href={social.url}
                                     className={'p-1'}
                                     target="_blank"
-                                    referrerPolicy='no-referrer'
+                                    referrerPolicy="no-referrer"
                                 >
                                     <social.icon height={32} width={32} />
                                 </Link>
@@ -77,7 +77,9 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="image w-full lg:w-1/2">
-                    <Skeleton
+                    <img
+                        src="/doodle.svg"
+                        alt=""
                         className={'max-w-sm mx-auto w-full aspect-square'}
                     />
                 </div>
