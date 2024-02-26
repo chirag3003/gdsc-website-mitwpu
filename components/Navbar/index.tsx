@@ -9,12 +9,16 @@ import { Card, CardContent } from '@/components/ui/card'
 
 const navLinks = [
     {
-        title: 'Podcasts',
-        href: '/podcasts',
+        title: 'Home',
+        href: '/',
     },
     {
         title: 'Events',
         href: '/events',
+    },
+    {
+        title: 'Podcasts',
+        href: '/podcasts',
     },
     {
         title: 'Projects',
@@ -51,7 +55,7 @@ function Navbar() {
                         className={'h-10 w-auto'}
                     />
                 </Link>
-                <nav className="nav-items items-center gap-4 hidden lg:flex">
+                <nav className="nav-items items-center gap-3 hidden lg:flex">
                     {navLinks.map((link, index) => {
                         return (
                             <Link

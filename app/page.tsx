@@ -59,6 +59,8 @@ export default function Home() {
                                     key={index}
                                     href={social.url}
                                     className={'p-1'}
+                                    target="_blank"
+                                    referrerPolicy='no-referrer'
                                 >
                                     <social.icon height={32} width={32} />
                                 </Link>

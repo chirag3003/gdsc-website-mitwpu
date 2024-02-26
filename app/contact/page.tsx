@@ -14,7 +14,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import axios from 'axios'
 import { useToast } from '@/components/ui/use-toast'
 import Link from 'next/link'
-import socials from '@/components/configs/socials'
+import socials,{mail} from '@/components/configs/socials'
 
 const ContactPage = () => {
     const { toast } = useToast()
@@ -64,7 +64,7 @@ const ContactPage = () => {
                                             className="h-7 w-6"
                                             aria-hidden="true"
                                         />
-                                        <p>{social.name}</p>
+                                        <p>{social.name==="Email"?mail:social.name}</p>
                                     </Link>
                                 )
                             })}

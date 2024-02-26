@@ -12,6 +12,8 @@ const Footer = () => {
                     <a
                         key={index}
                         href={item.url}
+                        target="_blank"
+                        referrerPolicy="no-referrer"
                         className="text-foreground md:text-foreground/60 hover:text-foreground"
                     >
                         <span className="sr-only">{item.name}</span>
