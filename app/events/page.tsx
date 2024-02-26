@@ -30,8 +30,14 @@ const EventsPage = async () => {
     })
     return (
         <section className={' p-8 lg:p-24 pt-32 lg:pt-32 '}>
-            <EventsList title={'Upcoming Events'} events={dataArray} />
-            <EventsList title={'Past Events'} events={dataPastArray} />
+            <EventsList
+                title={'Upcoming Events'}
+                events={dataArray.reverse()}
+            />
+            <EventsList
+                title={'Past Events'}
+                events={dataPastArray.reverse()}
+            />
         </section>
     )
 }
