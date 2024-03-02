@@ -40,6 +40,7 @@ const ProjectPage = async ({ params: { id } }: ProjectPageParams) => {
             )
             const data = contributorDoc.data() as ITeamDoc
             return {
+                id: data.id,
                 imageUrl: data.photographLink,
                 name: `${data.firstname} ${data.lastname}`,
                 linkedin: data.linkedinProfileLink,
