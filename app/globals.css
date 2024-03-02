@@ -6,7 +6,7 @@
 
 * {
     font-family: 'Roboto Mono', monospace;
-    scrollbar-width: 0;
+    scrollbar-width: none;
 }
 
 *::-webkit-scrollbar-track
