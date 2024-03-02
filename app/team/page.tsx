@@ -20,6 +20,7 @@ const TeamPage = async () => {
             return
         }
         const data: TeamCardProps = {
+            id: dataItem.id,
             name: `${dataItem.firstname} ${dataItem.lastname}`,
             role: dataItem.role,
             imageUrl: dataItem.photographLink,
