@@ -13,7 +13,7 @@ interface IEventDoc {
 
 interface IEventAgenda {
     activities: string[]
-    data: string
+    date: string
     starts_at: string
     ends_at: string
 }
