@@ -32,7 +32,7 @@
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.0",
         "embla-carousel-react": "^8.0.0-rc23",
-        "eslint": "8.56.0",
+        "eslint": "8.57.0",
         "eslint-config-next": "^14.1.0",
         "firebase": "^10.8.0",
         "http-status-codes": "^2.3.0",
