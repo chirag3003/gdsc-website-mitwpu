@@ -12,7 +12,7 @@ const TeamPage = async () => {
     const teamsCollection = collection(db, 'members')
     const querySnapshot = await getDocs(teamsCollection)
     const teams = new Map<string, TeamCardProps[]>()
-    teams.set('Tech', [])
+    teams.set('Developers', [])
     const leadership: TeamCardProps[] = []
     querySnapshot.forEach((doc) => {
         const dataItem = doc.data() as ITeamDoc

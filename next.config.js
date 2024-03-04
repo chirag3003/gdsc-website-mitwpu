@@ -14,6 +14,11 @@ const nextConfig = {
                 port: '',
                 pathname: '/v0/b/official-website-prod-1a724.appspot.com/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'storage.googleapis.com',
+                port: '',
+            },
         ],
     },
 }
