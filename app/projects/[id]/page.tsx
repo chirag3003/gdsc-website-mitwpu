@@ -40,6 +40,7 @@ const ProjectPage = async ({ params: { id } }: ProjectPageParams) => {
             )
             const data = contributorDoc.data() as ITeamDoc
             return {
+                id: data.id,
                 imageUrl: data.photographLink,
                 name: `${data.firstname} ${data.lastname}`,
                 linkedin: data.linkedinProfileLink,
@@ -106,7 +107,7 @@ const ProjectPage = async ({ params: { id } }: ProjectPageParams) => {
                                 key={index}
                             >
                                 <div className="p-1">
-                                    <Card className={'w-full'}>
+                                    <Card className={'w-full overflow-hidden'}>
                                         <CardContent className="flex aspect-square items-center justify-center p-0 overflow-hidden">
                                             <div className="w-full h-full relative overflow-hidden">
                                                 <Image

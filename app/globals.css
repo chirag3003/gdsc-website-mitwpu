@@ -6,7 +6,28 @@
 
 * {
     font-family: 'Roboto Mono', monospace;
+    scrollbar-width: none;
 }
+
+*::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: transparent;
+    display: none;
+}
+*::-webkit-scrollbar
+{
+	width: 4px;
+    background-color: transparent;
+    display: none;
+}
+*::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 2px solid #555555;
+    display: none;
+}
+
 
 /*@layer base {
     :root {

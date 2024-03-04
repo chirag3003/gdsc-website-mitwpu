@@ -20,6 +20,7 @@ import {
 import Image from 'next/image'
 
 export interface TeamCardProps {
+    id: string
     imageUrl: string
     name: string
     role: string

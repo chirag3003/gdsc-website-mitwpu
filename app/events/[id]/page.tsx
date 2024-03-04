@@ -77,11 +77,15 @@ const EventPage = async ({ params: { id } }: EventPageProps) => {
                                 key={index}
                             >
                                 <div className="p-1 h-full max-h-80">
-                                    <Card className={'h-full overflow-auto'}>
+                                    <Card
+                                        className={
+                                            'h-full overflow-y-auto overflow-x-hidden'
+                                        }
+                                    >
                                         <CardHeader>
-                                            <CardTitle>6th February</CardTitle>
+                                            <CardTitle>{agenda.date}</CardTitle>
                                             <CardDescription>
-                                                12:00 pm
+                                                {agenda.starts_at}
                                             </CardDescription>
                                         </CardHeader>
                                         <CardContent>
@@ -145,6 +149,7 @@ const EventPage = async ({ params: { id } }: EventPageProps) => {
                                             src={image}
                                             alt={''}
                                             fill={true}
+                                            style={{ objectFit: 'cover' }}
                                         />
                                         <Skeleton
                                             className={
