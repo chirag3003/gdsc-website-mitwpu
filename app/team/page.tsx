@@ -38,7 +38,7 @@ const TeamPage = async () => {
     })
     return (
         <section className={' p-8 lg:p-24 pt-32 lg:pt-32'}>
-            <TeamsList title="Leadership" team={leadership} />
+            <TeamsList title="Leadership" team={leadership.reverse()} />
             <Teams teams={teams} />
         </section>
     )
