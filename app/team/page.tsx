@@ -12,7 +12,7 @@ const TeamPage = async () => {
     const teamsCollection = collection(db, 'members')
     const querySnapshot = await getDocs(teamsCollection)
     const teams = new Map<string, TeamCardProps[]>()
-    teams.set('Tech', [])
+    teams.set('Developers', [])
     const leadership: TeamCardProps[] = []
     querySnapshot.forEach((doc) => {
         const dataItem = doc.data() as ITeamDoc
@@ -38,7 +38,7 @@ const TeamPage = async () => {
     })
     return (
         <section className={' p-8 lg:p-24 pt-32 lg:pt-32'}>
-            <TeamsList title="Leadership" team={leadership} />
+            <TeamsList title="Leadership" team={leadership.reverse()} />
             <Teams teams={teams} />
         </section>
     )
