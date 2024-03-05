@@ -48,7 +48,7 @@ const PodcastsList = ({ title, podcasts }: PodcastsListProps) => {
                                     <CardContent>
                                         <CardTitle>
                                             <p className="w-full text-ellipsis overflow-hidden whitespace-nowrap">
-                                                {title} afsdf asdaf sdf as d
+                                                {title} 
                                             </p>
                                         </CardTitle>
                                     </CardContent>
