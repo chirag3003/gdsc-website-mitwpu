@@ -64,7 +64,9 @@ const TeamCard = ({
             </CardContent>
             <CardFooter className={'flex items-center gap-3 justify-end mt-4'}>
                 <Link
-                    href={email}
+                    href={`mailto:${email}`}
+                    target='_blank'
+                    referrerPolicy='no-referrer'
                     className={cn(
                         buttonVariants({ size: 'icon', variant: 'ghost' }),
                         ''
@@ -74,6 +76,8 @@ const TeamCard = ({
                 </Link>
                 {linkedin && (
                     <Link
+                        target="_blank"
+                        referrerPolicy="no-referrer"
                         href={linkedin}
                         className={cn(
                             buttonVariants({
