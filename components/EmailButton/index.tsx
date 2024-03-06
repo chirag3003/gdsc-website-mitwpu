@@ -14,7 +14,7 @@ function EmailButton({children,email}:EmailButtonProps) {
   const {toast} = useToast()
   return (
     <Button
-      className='p-0 hover:bg-transparent text-inherit'
+      className='p-0 hover:bg-transparent text-inherit w-auto'
       variant={"ghost"}
       onClick={() => {navigator.clipboard.writeText(email??mail);toast({title:"Email copied to clipboard"})}}
     >

@@ -15,6 +15,7 @@ import axios from 'axios'
 import { useToast } from '@/components/ui/use-toast'
 import Link from 'next/link'
 import socials,{mail} from '@/components/configs/socials'
+import EmailButton from '@/components/EmailButton'
 
 const ContactPage = () => {
     const { toast } = useToast()
@@ -51,6 +52,22 @@ const ContactPage = () => {
                         </p>
                         <div className="mt-10 space-y-4 text-base leading-7 text-muted">
                             {socials.map((social, index) => {
+                                if(social.name === "Email"){
+                  return (
+                    <button 
+                      key={index}
+      onClick={() => {navigator.clipboard.writeText(mail);toast({title:"Email copied to clipboard"})}} className="flex flex-none w-full gap-x-4 bg-black/10 dark:bg-white/10 px-6 py-2 rounded hover:text-foreground"
+                  >
+                <span className="sr-only">{social.name}</span>
+                                        <social.icon
+                                            className="h-7 w-6"
+                                            aria-hidden="true"
+                                        />
+                                        <p>{social.name}</p>
+                         
+                      </button> 
+                  )
+                }
                                 return (
                                     <Link
                                         href={social.url}
@@ -64,7 +81,7 @@ const ContactPage = () => {
                                             className="h-7 w-6"
                                             aria-hidden="true"
                                         />
-                                        <p>{social.name==="Email"?mail:social.name}</p>
+                                        <p>{social.name}</p>
                                     </Link>
                                 )
                             })}
