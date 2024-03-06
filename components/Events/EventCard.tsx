@@ -47,6 +47,8 @@ const EventCard = ({ title, description, id, imageUrl }: EventCardProps) => {
             <CardFooter className={'flex items-center gap-3 justify-end mt-4'}>
                 <Link
                     href={`/events/${id}`}
+                    target='_blank'
+                    referrerPolicy='no-referrer'
                     className={cn(buttonVariants(), '')}
                 >
                     Details
