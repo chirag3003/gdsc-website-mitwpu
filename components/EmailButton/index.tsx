@@ -7,15 +7,16 @@ import { useToast } from '../ui/use-toast'
 
 interface EmailButtonProps {
   children: React.ReactNode
+  email?: string
 }
 
-function EmailButton({children}:EmailButtonProps) {
+function EmailButton({children,email}:EmailButtonProps) {
   const {toast} = useToast()
   return (
     <Button
       className='p-0 hover:bg-transparent text-inherit'
       variant={"ghost"}
-      onClick={() => {navigator.clipboard.writeText(mail);toast({title:"Email copied to clipboard"})}}
+      onClick={() => {navigator.clipboard.writeText(email??mail);toast({title:"Email copied to clipboard"})}}
     >
       {children}
     </Button>

@@ -18,6 +18,7 @@ import {
     LinkedInLogoIcon,
 } from '@radix-ui/react-icons'
 import Image from 'next/image'
+import EmailButton from '../EmailButton'
 
 export interface TeamCardProps {
     id: string
@@ -63,17 +64,18 @@ const TeamCard = ({
                 </CardDescription>
             </CardContent>
             <CardFooter className={'flex items-center gap-3 justify-end mt-4'}>
-                <Link
-                    href={`mailto:${email}`}
-                    target='_blank'
-                    referrerPolicy='no-referrer'
-                    className={cn(
+              <EmailButton
+                email={email}
+              >
+                <div
+                   className={cn(
                         buttonVariants({ size: 'icon', variant: 'ghost' }),
                         ''
                     )}
                 >
                     <Mail width={24} height={24} />
-                </Link>
+                </div>
+                </EmailButton>
                 {linkedin && (
                     <Link
                         target="_blank"
