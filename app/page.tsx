@@ -10,6 +10,7 @@ import {
 import Link from 'next/link'
 import Image from 'next/image'
 import socials from '@/components/configs/socials'
+import EmailButton from '@/components/EmailButton'
 
 const whatDoWeDo = [
     {
@@ -47,6 +48,14 @@ export default function Home() {
                     </p>
                     <div className="links flex gap-4 mt-8">
                         {socials.map((social, index) => {
+                            if(social.name === "Email"){
+                return <EmailButton key={index}><div
+                  key={index}
+                  className='p-1 cursor-pointer'
+                >
+                  <social.icon height={32} width={32} />
+                </div></EmailButton>
+              }
                             return (
                                 <Link
                                     key={index}
