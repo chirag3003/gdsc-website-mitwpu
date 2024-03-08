@@ -125,6 +125,8 @@ const EventPage = async ({ params: { id } }: EventPageProps) => {
           </h2>
           <Link
             href={data.googleMapLink}
+            target='_blank'
+            referrerPolicy='no-referrer'
             className={cn(
               buttonVariants({ variant: 'outline' }),
               'flex items-center gap-5 w-min mt-10'

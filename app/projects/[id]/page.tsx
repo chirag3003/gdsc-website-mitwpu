@@ -71,9 +71,9 @@ const ProjectPage = async ({ params: { id } }: ProjectPageParams) => {
                                 }),
                                 'flex gap-5'
                             )}
-                            href={'#'}
+                            href={project.mediumLink}
                         >
-                            <GitHubLogoIcon height={20} width={20} /> Github{' '}
+                            Medium
                         </Link>
                     </div>
                 </div>

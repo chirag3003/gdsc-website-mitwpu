@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button'
+import { getFirestore, getDoc, collection, doc, getDocs } from '@firebase/firestore'
 import { Label } from '@/components/ui/label'
 import {
     Select,
@@ -8,45 +9,28 @@ import {
     SelectValue,
 } from '@/components/ui/select'
 import React from 'react'
+import { RedirectType, redirect } from 'next/navigation'
+import { app } from '@/lib/firebase'
+import JoinUs from '@/components/JoinUs'
 
-function JoinUsPage() {
-    const isRecruiting = false
+async function JoinUsPage() {
+    const db = getFirestore(app)
+    const recruitmentCollection = collection(db, 'recruitment')
+    const querySnapshot = await getDocs(recruitmentCollection)
+    let teams: string[] = []
+    let data: IRecruitmentDoc
+    querySnapshot.forEach((doc) => {
+        data = doc.data() as IRecruitmentDoc
+        console.log(data)
+        Object.keys(data).forEach(key => {
+            // @ts-ignore
+            if (data[key])
+                teams.push(key)
+        })
+    })
+
     return (
-        <section className="p-8 lg:p-24 pt-32 lg:pt-32 grid lg:grid-cols-2 gap-20">
-            <div className="text-content">
-                <h1 className="text-5xl mb-6">Ready to join us?</h1>
-                <p className="max-w-xl">
-                    GDSC MITWPU is a student-run community passionate about
-                    technology and personal growth. We are a diverse group of
-                    individuals with different backgrounds, skillsets, and
-                    aspirations. What unites us is a shared love for learning,
-                    building, and creating. Get involved and make a difference!
-                    We look forward to welcoming you to the GDSC MITWPU family!
-                </p>
-                <div className="mt-10 py-2 px-4 bg-accent/50 rounded">
-                    Sorry, We are not recruiting right now
-                </div>
-            </div>
-            <form className="max-w-lg w-full mx-auto flex flex-col gap-4">
-                <div className="grid w-full items-center gap-1.5">
-                    <Label htmlFor="role">Preferred Role</Label>
-                    <Select>
-                        <SelectTrigger disabled={!isRecruiting} id="role" className="w-full">
-                            <SelectValue placeholder="Preferred Role" />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectItem value="tech">Tech</SelectItem>
-                            <SelectItem value="design">Design</SelectItem>
-                            <SelectItem value="pr">Pr & Sponsorship</SelectItem>
-                            <SelectItem value="management">
-                                Management
-                            </SelectItem>
-                        </SelectContent>
-                    </Select>
-                </div>
-                <Button disabled={!isRecruiting} className="text-lg w-full">Submit</Button>
-            </form>
-        </section>
+        <JoinUs data={data!} teams={teams}/>
     )
 }
 
