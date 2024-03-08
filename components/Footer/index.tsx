@@ -1,5 +1,6 @@
 import React from 'react'
 import socials from '../configs/socials'
+import EmailButton from '../EmailButton'
 
 const Footer = () => {
     return (
@@ -7,9 +8,26 @@ const Footer = () => {
             <div className="logo">
                 <img className="h-14 w-auto" src={'/gdsc-logo.svg'} alt={''} />
             </div>
-            <div className="flex space-x-6">
-                {socials.map((item, index) => (
-                    <a
+            <div className="flex space-x-6 items-center">
+                {socials.map((item, index) => {
+                    if(item.name === "Email"){
+                      return (
+                        <EmailButton key={index}>
+                          <div
+                        className="text-foreground md:text-foreground/60 hover:text-foreground"
+                    >
+                        <span className="sr-only">{item.name}</span>
+                        <item.icon
+                            className="h-6 w-6"
+                            aria-hidden="true"
+                            height={20}
+                            width={20}
+                        />
+                    </div>
+                        </EmailButton>
+                      )
+                    }
+                    return <a
                         key={index}
                         href={item.url}
                         target="_blank"
@@ -24,7 +42,7 @@ const Footer = () => {
                             width={20}
                         />
                     </a>
-                ))}
+                })}
             </div>
         </footer>
     )
