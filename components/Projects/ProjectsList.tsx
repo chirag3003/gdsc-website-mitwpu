@@ -1,5 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { ArrowTopRightIcon } from '@radix-ui/react-icons'
 
 interface ProjectsListProps {
     projects: IProjectDoc[]
@@ -9,7 +11,7 @@ const ProjectsList = ({ projects }: ProjectsListProps) => {
     return (
         <div>
             {projects.map((project) => (
-                <Link href={`/projects/${project.id}`} key={project.id}>
+                <Link target='_blank' referrerPolicy='no-referrer' href={`/projects/${project.id}`} key={project.id}>
                     <article
                         className="relative isolate flex flex-col gap-8 lg:flex-row-reverse justify-between max-w-6xl mx-auto border-b py-8">
                         <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
@@ -34,6 +36,7 @@ const ProjectsList = ({ projects }: ProjectsListProps) => {
                                     </p>
                                 </h3>
                                 <p className="mt-5 text-sm leading-6">{project.singleLineDescription}</p>
+                                <Button className='mt-10'>Read More <ArrowTopRightIcon /></Button>
                             </div>
                         </div>
                     </article>

@@ -32,14 +32,14 @@ export interface TeamCardProps {
 }
 
 const TeamCard = ({
-    name,
-    role,
-    instagram,
-    email,
-    github,
-    imageUrl,
-    linkedin,
-}: TeamCardProps) => {
+                      name,
+                      role,
+                      instagram,
+                      email,
+                      github,
+                      imageUrl,
+                      linkedin,
+                  }: TeamCardProps) => {
     return (
         <Card>
             <CardHeader>
@@ -64,17 +64,17 @@ const TeamCard = ({
                 </CardDescription>
             </CardContent>
             <CardFooter className={'flex items-center gap-3 justify-end mt-4'}>
-              <EmailButton
-                email={email}
-              >
-                <div
-                   className={cn(
-                        buttonVariants({ size: 'icon', variant: 'ghost' }),
-                        ''
-                    )}
+                <EmailButton
+                    email={email}
                 >
-                    <Mail width={24} height={24} />
-                </div>
+                    <div
+                        className={cn(
+                            buttonVariants({ size: 'icon', variant: 'ghost' }),
+                            '',
+                        )}
+                    >
+                        <Mail width={24} height={24} />
+                    </div>
                 </EmailButton>
                 {linkedin && (
                     <Link
@@ -86,7 +86,7 @@ const TeamCard = ({
                                 size: 'icon',
                                 variant: 'ghost',
                             }),
-                            ''
+                            '',
                         )}
                     >
                         <LinkedInLogoIcon width={24} height={24} />
@@ -97,7 +97,7 @@ const TeamCard = ({
                         href={github}
                         className={cn(
                             buttonVariants({ size: 'icon', variant: 'ghost' }),
-                            ''
+                            '',
                         )}
                     >
                         <GitHubLogoIcon width={24} height={24} />
@@ -111,7 +111,7 @@ const TeamCard = ({
                                 size: 'icon',
                                 variant: 'ghost',
                             }),
-                            ''
+                            '',
                         )}
                     >
                         <InstagramLogoIcon width={24} height={24} />

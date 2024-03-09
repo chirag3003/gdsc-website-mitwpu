@@ -34,7 +34,7 @@ function Teams({ teams }: TeamsProps) {
                     )
                 })}
             </div>
-            <TeamsList title={selectedTeam} team={teams.get(selectedTeam)!} />
+            <TeamsList team={teams.get(selectedTeam)!} />
         </div>
     )
 }
