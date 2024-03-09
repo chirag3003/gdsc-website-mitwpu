@@ -1,5 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { ArrowTopRightIcon } from '@radix-ui/react-icons'
 
 interface ProjectsListProps {
     projects: IProjectDoc[]
@@ -34,6 +36,7 @@ const ProjectsList = ({ projects }: ProjectsListProps) => {
                                     </p>
                                 </h3>
                                 <p className="mt-5 text-sm leading-6">{project.singleLineDescription}</p>
+                                <Button className='mt-10'>Read More <ArrowTopRightIcon /></Button>
                             </div>
                         </div>
                     </article>
