@@ -35,6 +35,13 @@ const TeamPage = async () => {
             teams.set(dataItem.department, [])
         }
         teams.get(dataItem.department)!.push(data)
+        if (data.name === 'Chirag Bhalotia') {
+            const member = teams.get(dataItem.department)![0]
+            teams.get(dataItem.department)![0] = data
+            teams.get(dataItem.department)![
+                teams.get(dataItem.department)!.length - 1
+            ] = member
+        }
     })
     return (
         <section className={' p-8 lg:p-24 pt-32 lg:pt-32'}>
