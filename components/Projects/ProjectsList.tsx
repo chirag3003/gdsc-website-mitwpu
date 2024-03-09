@@ -9,7 +9,7 @@ const ProjectsList = ({ projects }: ProjectsListProps) => {
     return (
         <div>
             {projects.map((project) => (
-                <Link href={`/projects/${project.id}`} key={project.id}>
+                <Link target='_blank' referrerPolicy='no-referrer' href={`/projects/${project.id}`} key={project.id}>
                     <article
                         className="relative isolate flex flex-col gap-8 lg:flex-row-reverse justify-between max-w-6xl mx-auto border-b py-8">
                         <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
