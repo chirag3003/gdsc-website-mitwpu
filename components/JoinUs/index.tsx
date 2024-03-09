@@ -57,7 +57,7 @@ function JoinUs({ data, teams }: IJoinUsProps) {
                 </div>
                 {/* @ts-ignore */}
                 <Link target={(data[selectedTeam]) ? '_blank': '_self'} referrerPolicy={'no-referrer'} href={(data[selectedTeam]) ?? '#'}
-                      className={cn(buttonVariants(), 'text-lg w-full')}>Submit</Link>
+                      className={cn(buttonVariants(), 'text-lg w-full')}>Fill the form</Link>
             </form>
         </section>
     )
