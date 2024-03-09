@@ -64,16 +64,18 @@ const ProjectPage = async ({ params: { id } }: ProjectPageParams) => {
                     </p>
                     <div className="buttons mt-12 flex gap-5">
                         <Link
+                            target='_blank'
+                            referrerPolicy='no-referrer'
                             className={cn(
                                 buttonVariants({
-                                    variant: 'secondary',
+                                    variant: 'default',
                                     size: 'lg',
                                 }),
                                 'flex gap-5'
                             )}
                             href={project.mediumLink}
                         >
-                            Medium
+                            Read on Medium
                         </Link>
                     </div>
                 </div>
@@ -93,7 +95,7 @@ const ProjectPage = async ({ params: { id } }: ProjectPageParams) => {
                     </div>
                 </div>
             </section>
-            <section className="images mb-20 bg-secondary py-8 lg:py-24">
+            {project.images.length > 0 && <section className="images mb-20 bg-secondary py-8 lg:py-24">
                 <h2 className={'text-4xl lg:text-5xl mb-10 px-8 lg:px-24'}>
                     Project Images
                 </h2>
@@ -128,7 +130,7 @@ const ProjectPage = async ({ params: { id } }: ProjectPageParams) => {
                     <CarouselPrevious />
                     <CarouselNext />
                 </Carousel>
-            </section>
+            </section>}
             <section className="team p-8 lg:px-24">
                 <TeamsList title={'Who Worked on this project'} team={team} />
             </section>

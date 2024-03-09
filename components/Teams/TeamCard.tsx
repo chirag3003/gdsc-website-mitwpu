@@ -49,7 +49,6 @@ const TeamCard = ({
                         alt={name}
                         fill={true}
                         style={{ objectFit: 'cover' }}
-                        placeholder={'blur'}
                     />
                     <Skeleton
                         className={
