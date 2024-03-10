@@ -2,11 +2,13 @@ import './globals.css'
 import { Toaster } from '@/components/ui/toaster'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
+import { Metadata } from 'next'
 
-export const metadata = {
+export const metadata:Metadata = {
     title: 'GDSC MIT WPU',
     description:
         'gdsc website created By Chirag Bhalotia',
+    icons:["/favicon.ico"],
 }
 
 interface RootLayoutProps {
