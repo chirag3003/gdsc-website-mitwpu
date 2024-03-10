@@ -47,11 +47,11 @@ const EventsPage = async () => {
     <section className={' p-8 lg:p-24 pt-32 lg:pt-32 '}>
       <EventsList
         title={'Upcoming Events'}
-        events={dataArray}
+        events={dataArray.reverse()}
       />
       <EventsList
         title={'Past Events'}
-        events={dataPastArray}
+        events={dataPastArray.reverse()}
       />
     </section>
   )
