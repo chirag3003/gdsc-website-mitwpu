@@ -38,7 +38,7 @@ export default function Home() {
               'bg-gradient text-6xl bg-clip-text bg-no-repeat text-transparent bg-gradient-to-br from-cyan-600 via-primary to-violet-600'
             }
           >
-            GDSC MIT{"-"}WPU
+            GDSC MITWPU
           </h1>
           <p className="description text-muted text-lg mt-4 max-w-xl">
             At GDSC MIT-WPU, we nurture a culture of creativity and
