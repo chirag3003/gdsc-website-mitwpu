@@ -18,6 +18,7 @@ export interface EventCardProps {
     description: string
     imageUrl: string
     id: string
+    date: number | null
 }
 
 const EventCard = ({ title, description, id, imageUrl }: EventCardProps) => {

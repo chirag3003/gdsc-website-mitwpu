@@ -22,6 +22,7 @@ import { app } from '@/lib/firebase'
 import { redirect, RedirectType } from 'next/navigation'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
+import moment from 'moment'
 
 interface EventPageProps {
   params: {
@@ -37,7 +38,12 @@ const EventPage = async ({ params: { id } }: EventPageProps) => {
   const querySnapshot = await getDoc(doc(eventsCollection, id))
   const data = querySnapshot.data() as IEventDoc
   if (!data) redirect('/events', RedirectType.replace)
+  console.log(data.agenda[0]?.starts_at)
+  const mom = moment(data.agenda[0]?.date, "DD/MM/YYYY")
+  const mom2 = moment(data.agenda[data.agenda.length - 1]?.date, "DD/MM/YYYY")
 
+  const date1 = mom.format("dddd, MMMM, Do")
+  const date2 = mom2.format("dddd, MMMM, Do")
   return (
     <>
       <section
@@ -113,7 +119,7 @@ const EventPage = async ({ params: { id } }: EventPageProps) => {
       {data.type === 'Upcoming' && (
         <section className={'p-8 lg:p-24 bg-secondary'}>
           <p className="text-muted text-xl lg:text-2xl mb-4 ">
-            {data.agenda[0]?.date} {data.agenda.length >= 2 && "-"} {data.agenda.length >= 2 && data.agenda[data.agenda.length - 1]?.date}
+            {data.agenda[0]?.date && date1} {data.agenda.length >= 2 && "-"} {data.agenda.length >= 2 && data.agenda[data.agenda.length - 1]?.date && date2}
           </p>
           <h2 className={'text-4xl lg:text-5xl max-w-4xl'}>
             {data.venue}
