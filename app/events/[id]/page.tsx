@@ -42,8 +42,8 @@ const EventPage = async ({ params: { id } }: EventPageProps) => {
   const mom = moment(data.agenda[0]?.date, "DD/MM/YYYY")
   const mom2 = moment(data.agenda[data.agenda.length - 1]?.date, "DD/MM/YYYY")
 
-  const date1 = mom.format("dddd, MMMM, Do")
-  const date2 = mom2.format("dddd, MMMM, Do")
+  const date1 = mom.format("dddd, MMMM Do")
+  const date2 = mom2.format("dddd, MMMM Do")
   return (
     <>
       <section
