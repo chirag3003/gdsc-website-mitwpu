@@ -5,7 +5,7 @@ import { app } from '@/lib/firebase'
 import { EventCardProps } from '@/components/Events/EventCard'
 import moment from 'moment'
 
-export const revalidate = 600
+export const revalidate = 1200
 
 const EventsPage = async () => {
   const db = getFirestore(app)
