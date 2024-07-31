@@ -16,7 +16,8 @@ const TeamPage = async () => {
     const leadership: TeamCardProps[] = []
     querySnapshot.forEach((doc) => {
         const dataItem = doc.data() as ITeamDoc
-        if (!(dataItem.core && dataItem.active)) {
+        if (dataItem.core === 'false' && dataItem.active === 'false') {
+            console.log(dataItem)
             return
         }
         const data: TeamCardProps = {
@@ -28,7 +29,13 @@ const TeamPage = async () => {
             linkedin: dataItem.linkedinProfileLink,
         }
         if (dataItem.department === 'Leadership') {
+            // console.log(dataItem)
             leadership.push(data)
+            if (data.name === 'Tanishq Shah' && leadership.length > 1) {
+                const member = leadership[0]
+                leadership[0] = data
+                leadership[leadership.length - 1] = member
+            }
             return
         }
         if (!teams.has(dataItem.department)) {
@@ -42,6 +49,7 @@ const TeamPage = async () => {
                 teams.get(dataItem.department)!.length - 1
             ] = member
         }
+        console.log(leadership)
     })
     return (
         <section className={' p-8 lg:p-24 pt-32 lg:pt-32'}>
