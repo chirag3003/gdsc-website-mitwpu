@@ -49,11 +49,17 @@ const TeamPage = async () => {
                 teams.get(dataItem.department)!.length - 1
             ] = member
         }
-        console.log(leadership)
+        if (data.name === 'Oaj Bidnurkar') {
+            const member = teams.get(dataItem.department)![1]
+            teams.get(dataItem.department)![1] = data
+            teams.get(dataItem.department)![
+                teams.get(dataItem.department)!.length - 1
+            ] = member
+        }
     })
     return (
         <section className={' p-8 lg:p-24 pt-32 lg:pt-32'}>
-            <TeamsList title="Leadership" team={leadership.reverse()} />
+            <TeamsList title="Leadership" team={leadership} />
             <Teams teams={teams} />
         </section>
     )
