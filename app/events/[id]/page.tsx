@@ -38,7 +38,6 @@ const EventPage = async ({ params: { id } }: EventPageProps) => {
   const querySnapshot = await getDoc(doc(eventsCollection, id))
   const data = querySnapshot.data() as IEventDoc
   if (!data) redirect('/events', RedirectType.replace)
-  console.log(data.agenda[0]?.starts_at)
   const mom = moment(data.agenda[0]?.date, "DD/MM/YYYY")
   const mom2 = moment(data.agenda[data.agenda.length - 1]?.date, "DD/MM/YYYY")
 

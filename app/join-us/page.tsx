@@ -21,7 +21,6 @@ async function JoinUsPage() {
     let data: IRecruitmentDoc
     querySnapshot.forEach((doc) => {
         data = doc.data() as IRecruitmentDoc
-        console.log(data)
         Object.keys(data).forEach(key => {
             // @ts-ignore
             if (data[key])

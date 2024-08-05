@@ -29,7 +29,6 @@ const TeamPage = async () => {
             linkedin: dataItem.linkedinProfileLink,
         }
         if (dataItem.department === 'Leadership') {
-            // console.log(dataItem)
             leadership.push(data)
             if (data.name === 'Tanishq Shah' && leadership.length > 1) {
                 const member = leadership[0]
