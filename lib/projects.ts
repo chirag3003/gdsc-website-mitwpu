@@ -1,4 +1,4 @@
-import { chirag } from './author'
+import { chirag, tanishq } from './author'
 
 const projects: IProjectCard[] = [
     {
@@ -50,6 +50,16 @@ const projects: IProjectCard[] = [
         link: 'https://ecommerce.chirag.codes/',
         github: 'https://github.com/chirag3003/ecommerce-frontend-tailwindcss-nextjs',
         author: chirag,
+    },
+    {
+        title: 'Spy Cam Detection',
+        description:
+            'A project to detect hidden spy cameras within a given environment',
+        techStack: ['Python'],
+        image: '/images/projects/project5.png',
+        // link: 'https://ecommerce.chirag.codes/',
+        github: 'https://github.com/tanishq396/Spy_Cam_Detection',
+        author: tanishq,
     },
 ]
 
