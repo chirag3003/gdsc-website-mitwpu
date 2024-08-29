@@ -26,7 +26,7 @@ const projects: IProjectCard[] = [
         title: 'Fleet Management System',
         description: '',
         techStack: ['Nodejs', 'mongodb', 'payment'],
-        image: '/images/projects/project7.png',
+        image: '/images/projects/project7.jpg',
         author: {
             name: 'Krushna Deshmukh',
         },
