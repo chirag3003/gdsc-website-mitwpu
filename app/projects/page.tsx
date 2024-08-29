@@ -1,7 +1,5 @@
 import React from 'react'
 import ProjectsList from '@/components/Projects/ProjectsList'
-import { collection, getDocs, getFirestore } from '@firebase/firestore'
-import { app } from '@/lib/firebase'
 import projects from '@/lib/projects'
 
 // export const revalidate = 600

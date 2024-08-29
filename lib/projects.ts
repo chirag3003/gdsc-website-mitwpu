@@ -13,6 +13,25 @@ const projects: IProjectCard[] = [
         // code: 'https://github1s.com/chirag3003/portfolio-v3',
     },
     {
+        title: 'Spy Cam Detection',
+        description:
+            'A project to detect hidden spy cameras within a given environment',
+        techStack: ['Python'],
+        image: '/images/projects/project5.png',
+        // link: 'https://ecommerce.chirag.codes/',
+        github: 'https://github.com/tanishq396/Spy_Cam_Detection',
+        author: tanishq,
+    },
+    {
+        title: 'Fleet Management System',
+        description: '',
+        techStack: ['Nodejs', 'mongodb', 'payment'],
+        image: '/images/projects/project7.png',
+        author: {
+            name: 'Krushna Deshmukh',
+        },
+    },
+    {
         title: 'WorkerBin',
         description:
             'A pastebin alternative used to store custom notes and made using cloudflare workers',
@@ -55,20 +74,10 @@ const projects: IProjectCard[] = [
         title: 'Architect Website',
         description: 'A demo website for an architect firm',
         techStack: ['Nextjs', 'Tailwind CSS', 'Typescript', 'Nodemailer'],
-        image: '/images/projects/project5.png',
+        image: '/images/projects/project6.png',
         link: 'https://architect.chirag.codes',
         github: 'https://github.com/chirag3003/ecommerce-frontend-tailwindcss-nextjs',
         author: chirag,
-    },
-    {
-        title: 'Spy Cam Detection',
-        description:
-            'A project to detect hidden spy cameras within a given environment',
-        techStack: ['Python'],
-        image: '/images/projects/project5.png',
-        // link: 'https://ecommerce.chirag.codes/',
-        github: 'https://github.com/tanishq396/Spy_Cam_Detection',
-        author: tanishq,
     },
 ]
 

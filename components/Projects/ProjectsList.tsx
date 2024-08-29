@@ -51,7 +51,9 @@ const ProjectsList = ({ projects }: ProjectsListProps) => {
                                 ></div>
                                 {author && (
                                     <div>
-                                        <p className="mt-5 mb-3 text-muted">Author</p>
+                                        <p className="mt-5 mb-3 text-muted">
+                                            Author
+                                        </p>
                                         <div className="flex items-center justify-between font-medium">
                                             <p className="text-lg">
                                                 {author.name}
