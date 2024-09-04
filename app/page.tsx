@@ -77,7 +77,7 @@ export default function Home() {
               Contact US
             </Link>
             <Link
-              href={'/join-us'}
+              href={'https://forms.gdscmitwpu.tech'}
               className={buttonVariants({
                 size: 'lg',
                 variant: 'secondary',
